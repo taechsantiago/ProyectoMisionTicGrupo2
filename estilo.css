@@ -1,5 +1,6 @@
 body{
     background:#59ABE3;
+    background-image: url("cerveza_fondo_registro.jpeg");
     margin:0}
 .form{
     width:340px;
@@ -51,7 +52,7 @@ button{
 button:hover{
     background:#78788c;
     color:#fff}
-div{
+/*div{
     content:'Hi';
     position:absolute;
     bottom:-15px;
@@ -62,5 +63,5 @@ div{
     padding:16px 4px 16px 0;
     border-radius:6px;
     font-size:13px;
-    box-shadow:10px 10px 40px -14px #000}
+    box-shadow:10px 10px 40px -14px #000}*/
     
