@@ -1,0 +1,39 @@
+ul {
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+  background-color: #21C08B;
+  overflow: hidden;
+}
+li{
+  float: right;
+}
+li button{
+  background: #97402D;
+
+}
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  /*padding:10px 10px;*/
+  margin: 16px 16px;
+  text-decoration: none;
+
+}
+li a:hover{
+  background-color:#171637;
+  color:#DC9614;
+}
+.header {
+  background-color: #21C08B;
+  width: 100%;
+  height: 100PX;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.header_text {
+  text-align: center;
+
+}
