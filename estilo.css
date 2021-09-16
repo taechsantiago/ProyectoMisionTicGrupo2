@@ -1,4 +1,4 @@
-ul {
+/*ul {
   list-style-type: none;
   margin:0;
   padding: 0;
@@ -7,16 +7,23 @@ ul {
 }
 li{
   float: right;
-}
-li button{
+}*/
+td{
   background: #97402D;
 
 }
-li a{
+td a{
+  /*color: white;*/
+
+
+  text-align: center;
+
+}
+/*li a{
   display: block;
   color: white;
-  text-align: center;
-  /*padding:10px 10px;*/
+  text-align: center;*/
+  /*padding:10px 10px;
   margin: 16px 16px;
   text-decoration: none;
 
@@ -24,7 +31,7 @@ li a{
 li a:hover{
   background-color:#171637;
   color:#DC9614;
-}
+}*/
 .header {
   background-color: #21C08B;
   width: 100%;
@@ -32,8 +39,13 @@ li a:hover{
   display: block;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .header_text {
   text-align: center;
 
+}
+.navegacion nav{
+  background-color: #CC5F36;
+  width: 100%;
 }
