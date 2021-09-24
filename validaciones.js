@@ -1,5 +1,5 @@
 function validar_contrasena(string){
-    const regex = /^[A-Z0-9]{6,}$/i;
+    const regex = /^[A-Z0-9]{6,}$/;
     return regex.test(string);
 }
 
