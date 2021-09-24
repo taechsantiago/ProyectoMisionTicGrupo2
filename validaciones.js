@@ -15,22 +15,18 @@ function validar_contrasena(string){
     const regex = /^[A-Z0-9]{6,}$/i;
     return regex.test(string);
 }
-function validar_edad_usuario(Num){
+function validar_edad_usuario(edad){
   sw = true;
-  var edad = document.getElementById("dato_edad_usuario").value;
-  if (typeof(edad) != "number"){
+  if (isNaN(edad) == true){
       sw = false;
-      alert("entro primera condicion");
   }
   if (edad <0){
     sw = false;
-    alert("entro segunda condicion");
   }
   if (edad < 13 || edad > 110 ){
     sw = false;
-    alert("entro tercera condicion");
+
   }
-  console.log(sw);
   return sw;
 }
 
