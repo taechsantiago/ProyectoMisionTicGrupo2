@@ -30,4 +30,4 @@ function validar_edad_usuario(edad){
   return sw;
 }
 
-module.exports.validar_contrasena = validar_contrasena;
+module.exports.validar_edad_usuario = validar_edad_usuario;
