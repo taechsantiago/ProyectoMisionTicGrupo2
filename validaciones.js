@@ -1,9 +1,9 @@
 function validar_contrasena(string){
-    const regex = /^[A-Z0-9]{6,}$/;
+    const regex = /^[A-Za-z0-9]{6,}$/;
     return regex.test(string);
 }
 function validar_nombre_usuario(string) {
-    const regex = /^[^0-9 ]{1}([A-Z ])+[A-Z]+$/;
+    const regex = /^[^0-9 ]([A-Za-z ])+[A-Za-z]+$/;
     return regex.test(string);
 }
 function validar_edad_usuario(edad){
