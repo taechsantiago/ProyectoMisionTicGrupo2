@@ -20,10 +20,10 @@ function validar_edad_usuario(edad){
   if (isNaN(edad) == true){
       sw = false;
   }
-  if (edad <0){
+  else if (edad <0){
     sw = false;
   }
-  if (edad < 13 || edad > 110 ){
+  else if (edad < 13 || edad > 110 ){
     sw = false;
 
   }
