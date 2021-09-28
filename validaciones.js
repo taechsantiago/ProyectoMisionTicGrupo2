@@ -20,6 +20,36 @@ function validar_edad_usuario(edad){
   }
   return sw;
 }
+
+let registros = []
+
+function agregarRegistro(){
+  let name = document.getElementById("dato_nombre_usuario").value;
+  let age = document.getElementById("dato_edad_usuario").value;
+  let password = document.getElementById("dato_contrasena").value;
+
+  var validation_name = validar_nombre_usuario(name);
+  var validation_age =validar_edad_usuario(age);
+  var validation_password =validar_contrasena(password);
+
+  if (validation_name && validation_age && validation_password){
+    registros.push(name);
+    console.log(name);
+
+    registros.push(age);
+    console.log(age);
+
+    registros.push(password);
+    console.log(password);
+  }
+
+  
+  
+}
+
 module.exports.validar_nombre_usuario =validar_nombre_usuario;
 module.exports.validar_contrasena = validar_contrasena;
 module.exports.validar_edad_usuario = validar_edad_usuario;
+
+module.exports.registros = registros;
+module.exports.agregarRegistro = agregarRegistro;
