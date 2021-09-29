@@ -33,23 +33,27 @@ function agregarRegistro(){
   var validation_password =validar_contrasena(password);
 
   if (validation_name && validation_age && validation_password){
-    registros.push(name);
-    console.log(name);
-
-    registros.push(age);
-    console.log(age);
-
-    registros.push(password);
-    console.log(password);
+    registros.push([name, age, password]);
   }
-
-  
-  
 }
 
+function OrdenarArreglo(arreglo){
+  cad = "";
+  for (let i = 0; i <= arreglo.length-1; i++) {
+    for (let j = i+1; j <= arreglo.length; j++) {
+        if (arreglo[j] < arreglo[i]){
+          Auxiliar = arreglo[i];
+          arreglo[i] = arreglo[j];
+          arreglo[j] = Auxiliar;
+        }
+    }
+  }
+  console.log("arreglo ordando: " + arreglo);
+}
 module.exports.validar_nombre_usuario =validar_nombre_usuario;
 module.exports.validar_contrasena = validar_contrasena;
 module.exports.validar_edad_usuario = validar_edad_usuario;
 
 module.exports.registros = registros;
+module.exports.OrdenarArreglo = OrdenarArreglo;
 module.exports.agregarRegistro = agregarRegistro;
