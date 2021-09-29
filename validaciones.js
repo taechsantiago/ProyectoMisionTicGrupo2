@@ -33,8 +33,10 @@ function agregarRegistro(){
   var validation_password =validar_contrasena(password);
 
   if (validation_name && validation_age && validation_password){
+    console.log("Se ingresa ->"+"name: " + name, "age: " + age, "password: " + password);
     registros.push({nombre: name, edad: age, contra: password});
   }
+  console.log(registros);
 }
 
 function OrdenarArreglo(arreglo){

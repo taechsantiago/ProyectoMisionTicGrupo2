@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href='estilo.css' rel='stylesheet' type='text/css'>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link href='estilo.css' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="validaciones.js"></script>
     <title>Formulario de registro</title>
 </head>
 <body>
@@ -18,10 +18,9 @@
             <p class="p_form" type="Nombre:"><input placeholder="Escribe tu nombre" id="dato_nombre_usuario" required></input></p>
             <p class="p_form" type="Edad:"><input placeholder="Escribe tu edad" id="dato_edad_usuario" type="number" required></input></p>
             <p class="p_form" type="Contraseña:"><input placeholder="Escribe una contraseña" id="dato_contrasena" type="password" required></input></p>
-            <button id="enviar_registro" type="submit">Enviar registro</button>
+            <button id="enviar_registro" type="submit" onclick="agregarRegistro()">Enviar registro</button>
         </form>
     </div>
-    <script type="text/javascript" src="validaciones.js"></script>
     <!-- It is decided to use details for the references in order not to be too invasive with the design -->
     <details>
         <summary>Referencias.</summary>
