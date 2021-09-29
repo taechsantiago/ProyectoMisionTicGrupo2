@@ -33,7 +33,7 @@ function agregarRegistro(){
   var validation_password =validar_contrasena(password);
 
   if (validation_name && validation_age && validation_password){
-    registros.push([name, age, password]);
+    registros.push({nombre: name, edad: age, contra: password});
   }
 }
 
