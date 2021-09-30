@@ -21,32 +21,41 @@ function validar_edad_usuario(edad){
   }
   return sw;
 }
+
+let registros =[];
 function agregarRegistro(){
-   let registros =[9,5,4,6,1,7,8,2,11,0,3];
-   OrdenarArreglo(registros);
-}
-function OrdenarArreglo(arreglo){
-  cad = "";
-  console.log("arreglo ordando1: " + arreglo);
-  for (let i = 0; i <= arreglo.length-1; i++) {
-    for (let j = i+1; j <= arreglo.length; j++) {
-        if (arreglo[j] < arreglo[i]){
-          Auxiliar = arreglo[i];
-          arreglo[i] = arreglo[j];
-          arreglo[j] = Auxiliar;
-        }
-    }
+  let name = document.getElementById("dato_nombre_usuario").value;
+  let age = document.getElementById("dato_edad_usuario").value;
+  let password = document.getElementById("dato_contrasena").value;
 
-
+  var validation_name = validar_nombre_usuario(name);
+  var validation_age =validar_edad_usuario(age);
+  var validation_password =validar_contrasena(password);
+  alert("nombre " + validation_name);
+  alert("edad " + validation_age);
+  alert("contraseña "+ validation_password);
+  if (validation_name && validation_age && validation_password){
+    registros.push({nombre: name, edad: age, contra: password});
   }
-  alert("Arreglo ordenado" + arreglo);
-  /*for(i of arreglo){
-    console.log(i);
-  }*/
-  //console.log("arreglo ordando: " + arreglo);
+  OrdenarArreglo(registros);
 }
-module.exports.validar_nombre_usuario =validar_nombre_usuario;
+
+function OrdenarArreglo(arreglo){
+    arreglo.sort(function (a, b) {
+      if (a.edad > b.edad) {
+        return 1;
+      }
+      if (a.edad < b.edad) {
+        return -1;
+      }
+      return 0;
+    });
+    return arreglo;
+}
+module.exports.validar_nombre_usuario = validar_nombre_usuario;
 module.exports.validar_contrasena = validar_contrasena;
-module.exports.validar_edad_usuario = validar_edad_usuario;
+module.exports.validar_edad_usuario = validar_edad_usuario
+
+module.exports.registros = registros;
 module.exports.OrdenarArreglo = OrdenarArreglo;
 module.exports.agregarRegistro = agregarRegistro;
