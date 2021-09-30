@@ -34,23 +34,23 @@ function agregarRegistro(){
 
   if (validation_name && validation_age && validation_password){
     console.log("Se ingresa ->"+"name: " + name, "age: " + age, "password: " + password);
-    registros.push({nombre: name, edad: age, contra: password});
+    registros.push({usuario: name, edad: age, contrasena: password});
   }
   console.log(registros);
 }
 
 function OrdenarArreglo(arreglo){
-  cad = "";
-  for (let i = 0; i <= arreglo.length-1; i++) {
-    for (let j = i+1; j <= arreglo.length; j++) {
-        if (arreglo[j] < arreglo[i]){
-          Auxiliar = arreglo[i];
-          arreglo[i] = arreglo[j];
-          arreglo[j] = Auxiliar;
-        }
+  arreglo.sort(function (a, b) {
+    if (a.edad > b.edad) {
+      return 1;
     }
-  }
-  console.log("arreglo ordando: " + arreglo);
+    if (a.edad < b.edad) {
+      return -1;
+    }
+    return 0;
+  });
+  console.log(arreglo);
+  return arreglo;
 }
 module.exports.validar_nombre_usuario =validar_nombre_usuario;
 module.exports.validar_contrasena = validar_contrasena;
