@@ -6,7 +6,7 @@ form.addEventListener('submit', ejecutaEnvio);
 nombre.addEventListener("input", validar);
 edad.addEventListener("input", validar);
 contrasena.addEventListener("input", validar);
-let registros = []
+let registros = [];
 
 function validar(e) {
   let functions = {"dato_contrasena":validar_contrasena(e.target.value),
